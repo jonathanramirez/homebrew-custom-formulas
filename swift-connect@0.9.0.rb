@@ -9,8 +9,7 @@ class SwiftConnectAT090 < Formula
 
   def install
     ENV["GOPATH"] = HOMEBREW_CACHE/"go_cache"
-    system "sh", "make/buf/scripts/brew.sh", ".build/brew"
-    prefix.install Dir[".build/brew/*"]
+    system "make", "install"
   end
 
   test do
